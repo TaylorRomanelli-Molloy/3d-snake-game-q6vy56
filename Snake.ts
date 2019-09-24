@@ -16,7 +16,7 @@ class Snake
   {
     this.currentPosition = 0;
     this.currentDirection = 0;
-    var p= new Point(0,0);
+    var p= new Point();
 
   }
 
@@ -26,31 +26,31 @@ class Snake
     {
       display("Moving down")
       //this.currentPosition = this.currentPosition + numMoves;
-      this.p.ycoord -= 1;
+      this.currentPosition = this.p.getY() - 1;
     }
     if(this.currentDirection == -1)
     { 
       display("Moving up")
       //this.currentPosition = this.currentPosition + numMoves;
-      this.p.ycoord += 1;
+      this.currentPosition = this.p.getY() + 1;
     }
     if(this.currentDirection == 2)
     {
       display("Moving left")
       //this.currentPosition = this.currentPosition + numMoves;
-      this.p.xcoord -= 1;
+      this.currentPosition = this.p.getX() - 1;
     }
     if(this.currentDirection == -2)
     {
       display("Moving left")
       //this.currentPosition = this.currentPosition + numMoves;
-      this.p.xcoord -= 1;
+      this.currentPosition = this.p.getX() - 1;
     }
     else
     {
       display("Moving right")
       //this.currentPosition = this.currentPosition + numMoves;
-      this.p.xcoord += 1;
+      this.currentPosition = this.p.getX() + 1;
     }
   }
 /*

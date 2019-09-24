@@ -14,7 +14,7 @@ class WorldModel
   }
   updateTurn(makeTurn:number):void
   {
-    s2.turn(makeTurn);
+    //s2.turn(makeTurn);
     s2.getPosition();
   }
   
