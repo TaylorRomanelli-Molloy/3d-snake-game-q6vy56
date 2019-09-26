@@ -5,18 +5,17 @@ import Point from './Point';
 
 class Snake
 {
-  private currentPosition: number;
+  private currentPosition: Point;
 
   private currentDirection: number;
   //0 is in front
 
-  private p: Point;
+  //private p: Point;
 
   constructor()
   {
-    this.currentPosition = 0;
+    this.currentPosition = new Point(0,0);
     this.currentDirection = 0;
-    var p= new Point();
 
   }
 
@@ -26,31 +25,31 @@ class Snake
     {
       display("Moving down")
       //this.currentPosition = this.currentPosition + numMoves;
-      this.currentPosition = this.p.getY() - 1;
+      this.currentPosition = new Point(this.currentPosition.x,this.currentPosition.y - numMoves);
     }
     if(this.currentDirection == -1)
     { 
       display("Moving up")
       //this.currentPosition = this.currentPosition + numMoves;
-      this.currentPosition = this.p.getY() + 1;
+      this.currentPosition = new Point(this.currentPosition.x,this.currentPosition.y + numMoves);
     }
     if(this.currentDirection == 2)
     {
       display("Moving left")
       //this.currentPosition = this.currentPosition + numMoves;
-      this.currentPosition = this.p.getX() - 1;
+      this.currentPosition = new Point(this.currentPosition.x - numMoves,this.currentPosition.y);
     }
     if(this.currentDirection == -2)
     {
       display("Moving left")
       //this.currentPosition = this.currentPosition + numMoves;
-      this.currentPosition = this.p.getX() - 1;
+      this.currentPosition = new Point(this.currentPosition.x - numMoves,this.currentPosition.y);
     }
     else
     {
       display("Moving right")
       //this.currentPosition = this.currentPosition + numMoves;
-      this.currentPosition = this.p.getX() + 1;
+      this.currentPosition = new Point(this.currentPosition.x + numMoves,this.currentPosition.y);
     }
   }
 /*
@@ -78,10 +77,15 @@ class Snake
       this.currentDirection = this.currentDirection - 1;
   }
 
-  getPosition():string //number
+  get position():Point //number
   {
     //return this.currentPosition
-    return ("Snake position is at " + this.p.getPoint());
+    return this.currentPosition;
+  }
+  get direction():number //number
+  {
+    //return this.currentDirection
+    return this.currentDirection;
   }
 }
 
