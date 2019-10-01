@@ -6,6 +6,7 @@ import display from './display';
 import Snake from './Snake';
 import SnakeTests from './SnakeTests';
 
+
 interface AppProps { }
 interface AppState {
   name: string;
@@ -55,3 +56,37 @@ display("Let's get started with React TypeScript!");
 //s1.turn(1);
 //s1.move(1);
 //display(s1.getPosition())
+
+/*
+
+<canvas id="Game" width="600" height="800"></canvas>
+const canvas = document.getElementById('Game');
+canvas
+{
+  background-color: cyan;
+}
+
+<html>
+  <head>
+    <title>Snake Game!</title>
+    <meta charset = "utf-8">
+    <meta name= "viewport" content = "width=device-width,
+                                       initial-scale=1">
+    <link rel = "stylesheet" href = "index.css">
+  </head>
+  <body>
+    <canvas width = "320" height = "480" id = "game"></canvas>
+    <script src = "index.js"></script>
+  </body>
+</html>
+
+
+
+let gameContext = document.getElementById("game").getContext("2d");
+gameContext.fillStyle = "red"; // replace red with desired color
+gameContext.fillRect(5, 10, 50, 20);
+
+
+gameContext.clearRect(5, 10, 50, 20);
+
+*/
