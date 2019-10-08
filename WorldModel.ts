@@ -8,8 +8,8 @@ class WorldModel
   protected widthWorld: number;
   protected heighWorld: number;
 
-  view : null;
-  
+  view : View|null;
+
 
   update(steps:number):void
   {
@@ -30,6 +30,12 @@ class WorldModel
   get height():number
   {
     return this.heighWorld;
+  }
+
+
+  set view(v:View):View
+  {
+    this.view = v;
   }
   
 
