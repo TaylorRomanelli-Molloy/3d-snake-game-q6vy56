@@ -1,7 +1,5 @@
+import WorldModel from './WorldModel';
 interface View
 {
-}
-function display():string
-{
-    return "Hi";
+  display : (wm : WorldModel) =>  void;
 }
