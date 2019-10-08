@@ -1,3 +1,4 @@
+import WorldModel from './WorldModel';
 class CanvasView implements View
 {
   scaleFactor : number;
@@ -14,4 +15,9 @@ class CanvasView implements View
     this.context = this.canvas.getContext("2d"); 
   }
 
+  display(wm:WorldModel)
+  {
+    this.canvas.width = wm.widthWorld * this.scaleFactor;
+    this.canvas.height = wm.heighWorld * this.scaleFactor;
+  }
 }
