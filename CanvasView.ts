@@ -1,18 +1,17 @@
 class CanvasView implements View
 {
-  canvasX : number;
-  canvasY : number;
   scaleFactor : number;
   canvas : HTMLCanvasElement;
+  context :  CanvasRenderingContext2D;
 
-  constructor(xvalue:number,yvalue:number,scale:number)
+  constructor(scale:number)
   {
-    this.canvasX = xvalue;
-    this.canvasY = yvalue;
     this.scaleFactor = scale;
 
     this.canvas = document.createElement("canvas");
     document.body.appendChild(this.canvas);
+
+    this.context = this.canvas.getContext("2d"); 
   }
 
 }
