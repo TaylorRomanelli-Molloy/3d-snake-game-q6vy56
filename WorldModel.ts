@@ -1,6 +1,5 @@
 import Snake from './Snake';
 import View from './View';
-
 var s1: Snake;
 var s2: Snake;
 
