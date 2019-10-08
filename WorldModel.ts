@@ -1,12 +1,15 @@
-import Snake from './Snake'
+import Snake from './Snake';
+import View from './View';
 
 var s1: Snake;
 var s2: Snake;
 
 class WorldModel
 {
-  public widthWorld: number;
-  public heighWorld: number;
+  protected widthWorld: number;
+  protected heighWorld: number;
+
+  view : null;
   
 
   update(steps:number):void

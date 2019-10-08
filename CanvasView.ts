@@ -19,5 +19,8 @@ class CanvasView implements View
   {
     this.canvas.width = wm.widthWorld * this.scaleFactor;
     this.canvas.height = wm.heighWorld * this.scaleFactor;
+
+    this.context.fillStyle = "red";
+    this.context.fillRect(5, 10, this.canvas.width, this.canvas.height);
   }
 }
