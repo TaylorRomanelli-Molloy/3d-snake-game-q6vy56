@@ -3,6 +3,7 @@ class CanvasView implements View
   canvasX : number;
   canvasY : number;
   scaleFactor : number;
+  canvas : HTMLCanvasElement;
 
   constructor(xvalue:number,yvalue:number,scale:number)
   {
@@ -10,7 +11,8 @@ class CanvasView implements View
     this.canvasY = yvalue;
     this.scaleFactor = scale;
 
-    document.createElement("canvas")
+    this.canvas = document.createElement("canvas");
+    document.body.appendChild(this.canvas);
   }
 
 }
