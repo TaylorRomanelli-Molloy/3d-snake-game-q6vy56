@@ -63,8 +63,8 @@ display("Let's get started with React TypeScript!");
 
 
 
-<canvas id="Game" width="600" height="800"></canvas>
-const canvas = document.getElementById('Game');
+//<canvas id="Game" width="600" height="800"></canvas>
+//const canvas = document.getElementById('Game');
 
 //let gameContext = document.getElementById("game").getContext("2d");
 //gameContext.fillStyle = "red"; // replace red with desired color
@@ -74,8 +74,8 @@ const canvas = document.getElementById('Game');
 
 let wm = new WorldModel();
 let cv = new CanvasView(3);
-let v = new View();
-wm.set(cv.get());
+wm.view = cv;
+wm.update(5);
 
 
 
