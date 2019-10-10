@@ -7,8 +7,8 @@ var s2: Snake;
 
 class WorldModel
 {
-  protected widthWorld: number;
-  protected heighWorld: number;
+  widthWorld: number;
+  heighWorld: number;
 
   view : View|null;
 

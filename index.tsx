@@ -5,6 +5,10 @@ import './style.css';
 import display from './display';
 import Snake from './Snake';
 import SnakeTests from './SnakeTests';
+import CanvasView from './CanvasView';
+import WorldModel from './WorldModel';
+import View from './View';
+
 
 
 interface AppProps { }
@@ -67,6 +71,11 @@ const canvas = document.getElementById('Game');
 //gameContext.fillRect(5, 10, 50, 20);
 
 //gameContext.clearRect(5, 10, 50, 20);
+
+let wm = new WorldModel();
+let cv = new CanvasView(3);
+let v = new View();
+wm.set(cv.get());
 
 
 

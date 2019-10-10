@@ -1,4 +1,6 @@
 import WorldModel from './WorldModel';
+import View from './View';
+
 class CanvasView implements View
 {
   scaleFactor : number;
@@ -24,3 +26,5 @@ class CanvasView implements View
     this.context.fillRect(5, 10, this.canvas.width, this.canvas.height);
   }
 }
+
+export default CamvasView;
