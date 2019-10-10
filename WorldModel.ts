@@ -10,7 +10,7 @@ class WorldModel
   protected widthWorld: number;
   protected heighWorld: number;
 
-  v : View|null;
+  view : View|null;
 
 
   update(steps:number):void
@@ -18,7 +18,7 @@ class WorldModel
     s1.move(steps);
     //s1.getPosition();
 
-    display(this.v);
+    display(this.view);
   }
   /*
   updateTurn(makeTurn:number):void
@@ -37,9 +37,9 @@ class WorldModel
   }
 
 
-  set View(vv:View)
+  set View(v:View)
   {
-    this.v = vv;
+    this.view = v;
   }
   
 
