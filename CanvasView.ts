@@ -27,4 +27,4 @@ class CanvasView implements View
   }
 }
 
-export default CamvasView;
+export default CanvasView;
