@@ -2,9 +2,6 @@ import Snake from './Snake';
 import View from './View';
 import display from './display';
 
-var s1: Snake;
-var s2: Snake;
-
 class WorldModel
 {
   widthWorld: number;
@@ -12,10 +9,17 @@ class WorldModel
 
   v : View|null;
 
+  s1:Snake;
+
+  constructor()
+  {
+    this.s1= new Snake;
+  }
+
 
   update(steps:number):void
   {
-    s1.move(steps);
+    this.s1.move(steps);
     //s1.getPosition();
 
     display(this.v);
