@@ -7,10 +7,10 @@ h1, p {
 }
 
 #output {
-  font-family: monospace;
+  font-family: doublespace;
   font-weight: bold;
-  color: rgb(196, 204, 204);
-  background-color: #0D1323;
+  color: rgb(61, 197, 197);
+  background-color: rgb(74, 74, 78);
   font-size: large;
   text-align: left;
   padding: 5px;
@@ -29,5 +29,5 @@ th, td {
 
 canvas
 {
-  background-color: palevioletred;
+  background-color: rgb(247, 47, 23);
 }

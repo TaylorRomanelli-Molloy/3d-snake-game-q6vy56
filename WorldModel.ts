@@ -23,6 +23,7 @@ class WorldModel
     //s1.getPosition();
 
     display(this.v);
+    //display(this.s1);
   }
   /*
   updateTurn(makeTurn:number):void

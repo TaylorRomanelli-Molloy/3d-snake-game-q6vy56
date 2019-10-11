@@ -20,7 +20,7 @@ class App extends Component<AppProps, AppState> {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'React'
+      name: ''
     };
   }
 
@@ -29,7 +29,7 @@ class App extends Component<AppProps, AppState> {
       <div>
         <Hello name={this.state.name} />
         <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
+          Game Starting...
         </p>
         <pre id="output">
           OUTPUT: <br />
@@ -47,8 +47,7 @@ class App extends Component<AppProps, AppState> {
 
 render(<App />, document.getElementById('root'));
 
-// Add display statements below
-display("Let's get started with React TypeScript!");
+
 
 
 //var s1 = new Snake;
@@ -76,6 +75,7 @@ let wm = new WorldModel();
 let cv = new CanvasView(3);
 wm.view = cv;
 wm.update(5);
+//cv.display(wm);
 
 
 
