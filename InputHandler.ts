@@ -1,5 +1,4 @@
 
-
 interface InputHandler
 {
   madeLeftMove:() => boolean ;
