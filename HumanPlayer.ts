@@ -1,15 +1,13 @@
 import SnakeController from './SnakeController';
 import Point from './Point';
+import Player from './Player';
 
-abstract class Player
+
+class HumanPlayer extends Player
 {
-  protected sc: SnakeController;
-  protected zerozeroPoint: Point;
-
   constructor(snakeController:SnakeController)
   {
-    this.sc = snakeController;
-    this.zerozeroPoint = new Point(0,0)
+    super(snakeController);
   }
 
   makeTurn():void
@@ -19,4 +17,5 @@ abstract class Player
   }
 }
 
-export default Player;
+
+export default HumanPlayer;
