@@ -1,39 +1,34 @@
-import InputHandler from './InputHandler';
+import InputHandler from "./InputHandler";
 
-class LRKeyInputHandler implements InputHandler
-{
-  wasLeftArrowPushed:boolean;
-  wasRightArrowPushed:boolean;
+class LRKeyInputHandler implements InputHandler {
+  wasLeftArrowPushed: boolean;
+  wasRightArrowPushed: boolean;
 
-  
-
-  constructor()
-  {
+  constructor() {
     this.wasLeftArrowPushed = false;
     this.wasRightArrowPushed = false;
 
-   window.addEventListener("keydown",  (event) => {
-    if (event.defaultPrevented) {
-    return; // Do nothing if the event was already processed
-  }
+    window.addEventListener("keydown", event => {
+      if (event.defaultPrevented) {
+        return; // Do nothing if the event was already processed
+      }
 
-  switch (event.key) {
+      switch (event.key) {
+        case "ArrowLeft":
+          this.wasLeftArrowPushed = true;
+          break;
 
-    case "ArrowLeft":
-      this.wasLeftArrowPushed = true;
-      break;
+        case "ArrowRight":
+          this.wasRightArrowPushed = false;
+          break;
 
-    case "ArrowRight":
-       this.wasRightArrowPushed = false;
-      break;
+        default:
+          return; // Quit when this doesn't handle the key event.
+      }
 
-    default:
-      return; // Quit when this doesn't handle the key event.
-  }
-
-  // Cancel the default action to avoid it being handled twice
-  event.preventDefault();
-});
+      // Cancel the default action to avoid it being handled twice
+      event.preventDefault();
+    });
   }
 
   /*
@@ -45,36 +40,25 @@ class LRKeyInputHandler implements InputHandler
   resetRightMove:() => void;
   */
 
-  madeLeftMove():boolean
-  {
+  madeLeftMove(): boolean {
     this.resetLeftMove();
     return true;
   }
-  madeRightMove():boolean
-  {
+  madeRightMove(): boolean {
     this.resetRightMove();
     return true;
   }
-  resetLeftMove():void
-  {
+  resetLeftMove(): void {
     this.wasLeftArrowPushed = false;
   }
-  resetRightMove():void
-  {
+  resetRightMove(): void {
     this.wasRightArrowPushed = false;
   }
 
-update()
-{
-  if(this.wasLeftArrowPushed == false && this.wasRightArrowPushed == false)
-  {
-
+  update() {
+    if (this.wasLeftArrowPushed == false && this.wasRightArrowPushed == false) {
+    }
   }
-}
-
-
-
-
 }
 
 export default LRKeyInputHandler;

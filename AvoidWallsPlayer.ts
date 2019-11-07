@@ -1,10 +1,11 @@
 import Player from './Player';
+import SnakeController from './SnakeController';
 
 class AvoidWallsPlayer extends Player
 {
-  constructor()
+  constructor(snakeController:SnakeController)
   {
-    super();
+    super(snakeController);
   }
 
   
