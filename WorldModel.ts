@@ -7,25 +7,26 @@ class WorldModel
   widthWorld: number;
   heighWorld: number;
 
-  v : View|null;
+  allViews : View[];
 
-  s1:Snake;
+  allSnakes:Snake[];
 
   constructor()
   {
-    this.s1= new Snake;
+    this.allSnakes = new Array();
+    this.allViews = new Array();
   }
 
-
+/*
   update(steps:number):void
   {
-    this.s1.move(steps);
+    //this.s1.move(steps);
     //s1.getPosition();
 
-    display(this.v);
+    //display(this.v);
     //display(this.s1);
   }
-  /*
+  
   updateTurn(makeTurn:number):void
   {
     //s2.turn(makeTurn);
@@ -42,9 +43,19 @@ class WorldModel
   }
 
 
-  set view(v:View)
+  addSnakes(s: Snake)
   {
-    this.v = v;
+    this.allSnakes[this.allSnakes.length] = s;
+  }
+
+  addViews(v: View)
+  {
+    this.allViews[this.allViews.length] = v;
+  }
+
+  get allSnakes[]():Array
+  {
+
   }
   
 
