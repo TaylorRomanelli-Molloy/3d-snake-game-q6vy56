@@ -17,7 +17,7 @@ class WorldModel
     this.allViews = new Array();
   }
 
-/*
+
   update(steps:number):void
   {
     //this.s1.move(steps);
@@ -25,14 +25,19 @@ class WorldModel
 
     //display(this.v);
     //display(this.s1);
+
+    for(let i=0; i<this.allSnakes.length;i++)
+    {
+      this.allSnakes[i].move(steps);
+    }
   }
   
-  updateTurn(makeTurn:number):void
-  {
+  //updateTurn(makeTurn:number):void
+  //{
     //s2.turn(makeTurn);
     //s2.getPosition();
-  }
-  */
+  //}
+  
   get width():number
   {
     return this.widthWorld;
@@ -53,9 +58,13 @@ class WorldModel
     this.allViews[this.allViews.length] = v;
   }
 
-  get allSnakes[]():Array
+  get allSnakesArray()
   {
-
+    return this.allSnakes;
+  }
+  get allViewsArray()
+  {
+    return this.allViews;
   }
   
 

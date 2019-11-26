@@ -73,10 +73,16 @@ render(<App />, document.getElementById('root'));
 
 let wm = new WorldModel();
 let cv = new CanvasView(3);
-wm.view = cv;
-wm.update(5);
+//wm.view = cv;
+//wm.update(5);
 //cv.display(wm);
-
+let s1 = new Snake();
+let s2 = new Snake();
+wm.addSnakes(s1);
+wm.addSnakes(s2);
+display(wm.allSnakesArray);
+wm.addSnakes(s2);
+display(wm.allSnakesArray);
 
 
 
