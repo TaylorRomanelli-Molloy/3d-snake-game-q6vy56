@@ -5,16 +5,22 @@ import Point from './Point';
 
 class Snake
 {
-  private currentPosition: Point;
+  private currentParts: [Point];
 
   private currentDirection: number;
   //0 is in front
 
   //private p: Point;
 
-  constructor()
+  protected startPosition: Point;
+
+  protected size: number;
+
+  constructor(sp:Point,s:number)
   {
-    this.currentPosition = new Point(0,0);
+    this.startPosition = sp;
+    this.size = s;
+    this.currentParts[0] = this.startPosition;
     this.currentDirection = 0;
 
   }
@@ -24,32 +30,32 @@ class Snake
     if(this.currentDirection == 1)
     {
       display("Moving down")
-      //this.currentPosition = this.currentPosition + numMoves;
-      this.currentPosition = new Point(this.currentPosition.x,this.currentPosition.y - numMoves);
+      //this.currentParts = this.currentParts + numMoves;
+      this.currentParts = new Point(this.currentParts.x,this.currentParts.y - numMoves);
     }
     if(this.currentDirection == -1)
     { 
       display("Moving up")
-      //this.currentPosition = this.currentPosition + numMoves;
-      this.currentPosition = new Point(this.currentPosition.x,this.currentPosition.y + numMoves);
+      //this.currentParts = this.currentParts + numMoves;
+      this.currentParts = new Point(this.currentParts.x,this.currentParts.y + numMoves);
     }
     if(this.currentDirection == 2)
     {
       display("Moving left")
-      //this.currentPosition = this.currentPosition + numMoves;
-      this.currentPosition = new Point(this.currentPosition.x - numMoves,this.currentPosition.y);
+      //this.currentParts = this.currentParts + numMoves;
+      this.currentParts = new Point(this.currentParts.x - numMoves,this.currentParts.y);
     }
     if(this.currentDirection == -2)
     {
       display("Moving left")
-      //this.currentPosition = this.currentPosition + numMoves;
-      this.currentPosition = new Point(this.currentPosition.x - numMoves,this.currentPosition.y);
+      //this.currentParts = this.currentParts + numMoves;
+      this.currentParts = new Point(this.currentParts.x - numMoves,this.currentParts.y);
     }
     else
     {
       display("Moving right")
-      //this.currentPosition = this.currentPosition + numMoves;
-      this.currentPosition = new Point(this.currentPosition.x + numMoves,this.currentPosition.y);
+      //this.currentParts = this.currentParts + numMoves;
+      this.currentParts = new Point(this.currentParts.x + numMoves,this.currentParts.y);
     }
   }
 /*
@@ -79,14 +85,17 @@ class Snake
 
   get position():Point //number
   {
-    //return this.currentPosition
-    return this.currentPosition;
+    //return this.currentParts
+    return this.currentParts;
   }
   get direction():number //number
   {
     //return this.currentDirection
     return this.currentDirection;
   }
+
+
+
 }
 
 export default Snake;
