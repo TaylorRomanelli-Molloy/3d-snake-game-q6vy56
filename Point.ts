@@ -33,6 +33,14 @@ class Point
     return this.ycoord;
   }
 
+   equals(p: Point)
+  {
+    if(this.x == p.x && this.y == p.y)
+      return true;
+    else  
+      return false;
+  }
+
 }
 
 export default Point;
