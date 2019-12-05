@@ -8,7 +8,6 @@ class GameController
   private player1: Player;
   private player2: Player;
 
-  private lastTime: number;
 
   constructor(wm: WorldModel)
   {
@@ -26,24 +25,25 @@ class GameController
 
   run()
   {
-    this.lastTime = 0;
-  }
+    let lastTime: number =0;
 
-  updateFrame()
-  {
-    this.player1.makeTurn();
-    this.player2.makeTurn();
-
-    if(this.lastTime > 250)
+    let updateFrame=(milliseconds) =>
     {
-      this.gameWorld.update(1);
-      this.lastTime-=250;
-    }
+      this.player1.makeTurn();
+      this.player2.makeTurn();
 
-    this.lastTime++;
+     if(milliseconds - lastTime > 250)
+     {
+      this.gameWorld.update(1);
+      lastTime+=250;
+    }
     
-    requestAnimationFrame(this.updateFrame);
+    requestAnimationFrame(updateFrame);
   }
+  requestAnimationFrame(updateFrame);
+  }
+
+  
 
 }
 
