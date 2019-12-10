@@ -23,9 +23,9 @@ class Snake
     this.currentParts[0] = this.startPosition;
     this.currentDirection = 0;
 
-    for(let q =1; q < this.size-1; q++)
+    for(let q =1; q < this.size; q++)
     {
-      this.currentParts[q] = new Point[this.currentParts[q-1].x-1,this.currentParts[q-1].y];
+      this.currentParts[q] = new Point(this.currentParts[q-1].x-1,this.currentParts[q-1].y);
     }
   }
 
@@ -101,7 +101,7 @@ class Snake
 
   didCollide(s: Point)
   {
-    /*
+    
     for(let z = 0; z < this.currentParts.length; z++)
     {
       if(this.currentParts[z] == s)
@@ -109,9 +109,9 @@ class Snake
         return true;
       }
     }
-    */
+    
 
-    if(this.currentParts[0] == s)
+    if(this.currentParts[0].equals(s))
     {
       return true;
     }
