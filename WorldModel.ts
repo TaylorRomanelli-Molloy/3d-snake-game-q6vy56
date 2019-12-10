@@ -30,6 +30,10 @@ class WorldModel
     {
       this.allSnakes[i].move(steps);
     }
+
+
+
+    let tempArray: Snake[];
   }
   
   //updateTurn(makeTurn:number):void

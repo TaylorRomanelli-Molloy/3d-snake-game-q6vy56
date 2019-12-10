@@ -23,6 +23,10 @@ class Snake
     this.currentParts[0] = this.startPosition;
     this.currentDirection = 0;
 
+    for(let q =1; q < this.size-1; q++)
+    {
+      this.currentParts[q] = new Point[this.currentParts[q-1].x-1,this.currentParts[q-1].y];
+    }
   }
 
   move(numMoves:number):void
@@ -31,31 +35,31 @@ class Snake
     {
       display("Moving down")
       //this.currentParts = this.currentParts + numMoves;
-      this.currentParts = new Point(this.currentParts.x,this.currentParts.y - numMoves);
+      this.currentParts[0] = new Point(this.currentParts[0].x,this.currentParts[0].y - numMoves);
     }
     if(this.currentDirection == -1)
     { 
       display("Moving up")
       //this.currentParts = this.currentParts + numMoves;
-      this.currentParts = new Point(this.currentParts.x,this.currentParts.y + numMoves);
+      this.currentParts[0] = new Point(this.currentParts[0].x,this.currentParts[0].y + numMoves);
     }
     if(this.currentDirection == 2)
     {
       display("Moving left")
       //this.currentParts = this.currentParts + numMoves;
-      this.currentParts = new Point(this.currentParts.x - numMoves,this.currentParts.y);
+      this.currentParts[0] = new Point(this.currentParts[0].x - numMoves,this.currentParts[0].y);
     }
     if(this.currentDirection == -2)
     {
       display("Moving left")
       //this.currentParts = this.currentParts + numMoves;
-      this.currentParts = new Point(this.currentParts.x - numMoves,this.currentParts.y);
+      this.currentParts[0] = new Point(this.currentParts[0].x - numMoves,this.currentParts[0].y);
     }
     else
     {
       display("Moving right")
       //this.currentParts = this.currentParts + numMoves;
-      this.currentParts = new Point(this.currentParts.x + numMoves,this.currentParts.y);
+      this.currentParts[0] = new Point(this.currentParts[0].x + numMoves,this.currentParts[0].y);
     }
   }
 /*
@@ -86,12 +90,35 @@ class Snake
   get position():Point //number
   {
     //return this.currentParts
-    return this.currentParts;
+    return this.currentParts[0];
   }
   get direction():number //number
   {
     //return this.currentDirection
     return this.currentDirection;
+  }
+
+
+  didCollide(s: Point)
+  {
+    /*
+    for(let z = 0; z < this.currentParts.length; z++)
+    {
+      if(this.currentParts[z] == s)
+      {
+        return true;
+      }
+    }
+    */
+
+    if(this.currentParts[0] == s)
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
   }
 
 

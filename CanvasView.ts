@@ -25,6 +25,14 @@ class CanvasView implements View
     this.context.fillStyle = "red";
     this.context.fillRect(5, 10, this.canvas.width, this.canvas.height);
   }
+
+  /*update()
+  {
+    for(let z = 0; z < this.currentParts.length; z++)
+    {
+
+    }
+  }*/
 }
 
 export default CanvasView;
