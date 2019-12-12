@@ -10,11 +10,11 @@ class GameController
   private player1: Player;
   private player2: Player;
 
-  private g: Game;
+  private game: Game;
 
-  constructor(wm: WorldModel)
+  constructor(g: WorldModel)
   {
-    this.gameWorld = wm;
+    this.game = g;
   }
 
   set Player1(p:Player)
