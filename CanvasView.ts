@@ -36,9 +36,41 @@ class CanvasView implements View
     document.body.removeChild(this.canvas);
   }
 
+  draw(context: CanvasRenderingContext2D, a: Actor)
+  {
+    if(a.type() == "snake")
+    {
+      //this.drawSnake(context);
+    }
+    if(a.type() == "food")
+    {
+      //this.drawFood(context);
+    }
+  }
+  /*
+  drawSnake(context: CanvasRenderingContext2D)
+  {
+    this.draw(context,a)
+  }
+  drawFood(context: CanvasRenderingContext2D)
+  {
+
+  }
+  */
+
   update()
   { 
-    
+    for(var Actor of Actor)
+    {
+      if(Actor.type == "snake")
+      {
+        //DRAW SNAKES
+      }
+      if(Actor.type == "food")
+      {
+        //DRAW FOOD
+      }
+    }
 
   }
 }
