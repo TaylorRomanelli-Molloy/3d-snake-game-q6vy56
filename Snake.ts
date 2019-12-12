@@ -22,6 +22,7 @@ class Snake implements Collidable
   private numMovesPerMove: number;
 
   private isCurrentlyActive: boolean;
+  private isType: string = "snake";
 
 
 
@@ -112,7 +113,24 @@ class Snake implements Collidable
   }
   didCollide(a: Actor): boolean
   {
-    return false;
+    if(a.type() != "snake")
+    {
+      for(let z = 0; z < this.currentParts.length; z++)
+      {
+       if(this.currentParts[0] == this.currentParts[z])
+        {
+          return true;
+        }
+      }
+
+    }
+    /*
+    if(this.type != "snake")
+    {
+      return true;
+    }
+    */
+    
   }
 
   didCollideOld(s: Point)
@@ -152,7 +170,7 @@ class Snake implements Collidable
   }
   get type(): string
   {
-    return "snake";
+    return this.isType;
   }
 
 

@@ -3,7 +3,7 @@
 interface Actor
 {  
   update:()=>void;
-
+  type:() => string;
 
 }
 

@@ -5,6 +5,7 @@ class Food implements Actor
 {
   private currentPosition: Point;
   private isCurrentlyActive: boolean;
+  private isType: string = "food";
 
   constructor(x:number,y:number)
   {
@@ -25,7 +26,7 @@ class Food implements Actor
   }
   get type(): string
   {
-    return "food";
+    return this.isType;
   }
 
   update()
