@@ -13,7 +13,9 @@ class MainMenuController
     this.humanPlayersInput = "input";
     this.aiPlayerInput = "input";
 
-    document.createElement(this.playGameButton,this.humanPlayersInput,this.aiPlayerInput);
+    document.createElement(this.playGameButton);
+    document.createElement(this.humanPlayersInput);
+    document.createElement(this.aiPlayerInput);
   }
 }
 export default MainMenuController;
