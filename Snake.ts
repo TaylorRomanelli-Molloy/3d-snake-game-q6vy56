@@ -19,12 +19,22 @@ class Snake implements Collidable
 
   protected size: number;
 
+  private numMovesPerMove: number;
+
+  private isCurrentlyActive: boolean;
+
+
+
+
   constructor(sp:Point,s:number)
   {
     this.startPosition = sp;
     this.size = s;
     this.currentParts[0] = this.startPosition;
     this.currentDirection = 0;
+
+    this.numMovesPerMove = 1;
+    this.isCurrentlyActive = true;
 
     for(let q =1; q < this.size; q++)
     {
@@ -100,9 +110,12 @@ class Snake implements Collidable
     //return this.currentDirection
     return this.currentDirection;
   }
+  didCollide(a: Actor): boolean
+  {
+    return false;
+  }
 
-
-  didCollide(a: Actor)
+  didCollideOld(s: Point)
   {
     
     for(let z = 0; z < this.currentParts.length; z++)
@@ -122,6 +135,24 @@ class Snake implements Collidable
     {
       return false;
     }
+  }
+
+  update()
+  {
+    this.move(this.numMovesPerMove);
+  }
+
+  die()
+  {
+    this.isCurrentlyActive = false;
+  }
+  get isActive(): boolean
+  {
+    return this.isCurrentlyActive;
+  }
+  get type(): string
+  {
+    return "snake";
   }
 
 
