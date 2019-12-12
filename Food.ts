@@ -23,6 +23,10 @@ class Food implements Actor
   {
     return this.isCurrentlyActive;
   }
+  get type(): string
+  {
+    return "food";
+  }
 
   update()
   {
