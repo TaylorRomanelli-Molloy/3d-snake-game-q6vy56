@@ -122,6 +122,7 @@ class Snake implements Collidable
           return true;
         }
       }
+      return false;
 
     }
     if(this.type != "snake")
@@ -133,6 +134,7 @@ class Snake implements Collidable
           return true;
         }
       }
+      return false;
     }
     
     
@@ -176,6 +178,31 @@ class Snake implements Collidable
   get type(): string
   {
     return this.isType;
+  }
+
+  grow()
+  {
+    if(this.currentDirection == -1)//up
+    {
+      this.currentParts[this.currentParts.length] = new Point((this.currentParts[length-1].x),this.currentParts[length-1].y-this.currentParts.length);
+    }
+
+    if(this.currentDirection == 1)//down
+    {
+      this.currentParts[this.currentParts.length] = new Point((this.currentParts[length-1].x),this.currentParts[length-1].y+this.currentParts.length);
+    }
+
+
+    if(this.currentDirection == -2)//right
+    {
+      this.currentParts[this.currentParts.length] = new Point((this.currentParts[length-1].x-this.currentParts.length),this.currentParts[length-1].y);
+    }
+
+    if(this.currentDirection == 2)//left
+    {
+      this.currentParts[this.currentParts.length] = new Point((this.currentParts[length-1].x+this.currentParts.length),this.currentParts[length-1].y);
+    }
+    
   }
 
 
