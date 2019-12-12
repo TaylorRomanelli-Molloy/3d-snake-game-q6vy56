@@ -2,7 +2,7 @@
 
 interface Actor
 {  
-  update();
+  update:()=>void;
 
 
 }

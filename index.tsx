@@ -8,6 +8,7 @@ import SnakeTests from './SnakeTests';
 import CanvasView from './CanvasView';
 import WorldModel from './WorldModel';
 import View from './View';
+import Point from './Point';
 
 
 
@@ -76,8 +77,10 @@ let cv = new CanvasView(3);
 //wm.view = cv;
 //wm.update(5);
 //cv.display(wm);
-let s1 = new Snake();
-let s2 = new Snake();
+let p1 = new Point(0,0);
+let p2 = new Point(10,10);
+let s1 = new Snake(p1,2);
+let s2 = new Snake(p2,4);
 wm.addSnakes(s1);
 wm.addSnakes(s2);
 display(wm.allSnakesArray);

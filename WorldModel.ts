@@ -26,14 +26,23 @@ class WorldModel
     //display(this.v);
     //display(this.s1);
 
+    let tempArray: Snake[];
+
+
     for(let i=0; i<this.allSnakes.length;i++)
     {
       this.allSnakes[i].move(steps);
     }
 
+    for(let i=0; i<this.allSnakes.length;i++)
+    {
+      //if(this.allSnakes[i].didCollide(this.allSnakes.currentParts[]) = true)
+      //{
+       //this.allSnakes.splice(i);
+      //}
+    }
 
-
-    let tempArray: Snake[];
+    
   }
   
   //updateTurn(makeTurn:number):void
