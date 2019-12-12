@@ -8,7 +8,7 @@ import Actor from './Actor';
 
 class Snake implements Collidable
 {
-  private currentParts: [Point];
+  private currentParts: Point[];
 
   private currentDirection: number;
   //0 is in front

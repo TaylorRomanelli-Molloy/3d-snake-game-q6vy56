@@ -72,20 +72,20 @@ render(<App />, document.getElementById('root'));
 
 //gameContext.clearRect(5, 10, 50, 20);
 
-let wm = new WorldModel();
-let cv = new CanvasView(3);
+//let wm = new WorldModel();
+//let cv = new CanvasView(3);
 //wm.view = cv;
 //wm.update(5);
 //cv.display(wm);
-let p1 = new Point(0,0);
-let p2 = new Point(10,10);
-let s1 = new Snake(p1,2);
-let s2 = new Snake(p2,4);
-wm.addSnakes(s1);
-wm.addSnakes(s2);
-display(wm.allSnakesArray);
-wm.addSnakes(s2);
-display(wm.allSnakesArray);
+//let p1 = new Point(0,0);
+//let p2 = new Point(10,10);
+//let s1 = new Snake(p1,2);
+//let s2 = new Snake(p2,4);
+//wm.addSnakes(s1);
+//wm.addSnakes(s2);
+//display(wm.allSnakesArray);
+//wm.addSnakes(s2);
+//display(wm.allSnakesArray);
 
 
 
