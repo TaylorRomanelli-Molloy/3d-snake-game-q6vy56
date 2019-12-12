@@ -11,6 +11,18 @@ abstract class Player
   }
 
   abstract makeTurn():void;
+
+  get isSnakeActive()
+  {
+    if(this.sc.isSnakeActive() == true)
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  }
 }
 
 export default Player;

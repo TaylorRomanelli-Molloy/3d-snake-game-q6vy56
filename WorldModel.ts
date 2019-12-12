@@ -42,6 +42,11 @@ class WorldModel
       //}
     }
 
+    //check if no food is on screen 
+    //adds food if no food is on screen
+    //check length of filtered actors
+    //Math.floor(n*Math.random())
+
     
   }
   
@@ -80,6 +85,17 @@ class WorldModel
     return this.allViews;
   }
 
+
+  reset()
+  {
+    //this.allViews.forEach(this.allViews[].dispose());
+    for(let i = 0; i<this.allViews.length;i++)
+    {
+      //dispose
+      //actors and views properties to empty arrays
+    }
+  }
+ 
  
   
 

@@ -42,6 +42,17 @@ class SnakeController
     return this.snakeWorld.height;
   }
 
+  get isSnakeActive()
+  {
+    if(this.slitherer.isActive == true)
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  }
 }
 
 

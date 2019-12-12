@@ -1,6 +1,11 @@
 import WorldModel from './WorldModel';
 import View from './View';
 
+
+import Food from './Food';
+import Snake from './Snake';
+import Actor from './Actor';
+
 class CanvasView implements View
 {
   scaleFactor : number;
@@ -26,13 +31,16 @@ class CanvasView implements View
     this.context.fillRect(5, 10, this.canvas.width, this.canvas.height);
   }
 
-  /*update()
+  dispose()
   {
-    for(let z = 0; z < this.currentParts.length; z++)
-    {
+    document.body.removeChild(this.canvas);
+  }
 
-    }
-  }*/
+  update()
+  { 
+    
+
+  }
 }
 
 export default CanvasView;
