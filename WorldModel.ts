@@ -13,8 +13,8 @@ class WorldModel
 
   constructor()
   {
-    this.allSnakes = new Array();
-    this.allViews = new Array();
+    this.allSnakes = [];
+    this.allViews = [];
   }
 
 

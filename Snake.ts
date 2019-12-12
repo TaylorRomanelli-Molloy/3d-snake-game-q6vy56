@@ -184,23 +184,23 @@ class Snake implements Collidable
   {
     if(this.currentDirection == -1)//up
     {
-      this.currentParts[this.currentParts.length] = new Point((this.currentParts[length-1].x),this.currentParts[length-1].y-this.currentParts.length);
+      this.currentParts[this.currentParts.length] = new Point((this.currentParts[0].x),this.currentParts[0].y-this.currentParts.length);
     }
 
     if(this.currentDirection == 1)//down
     {
-      this.currentParts[this.currentParts.length] = new Point((this.currentParts[length-1].x),this.currentParts[length-1].y+this.currentParts.length);
+      this.currentParts[this.currentParts.length] = new Point((this.currentParts[0].x),this.currentParts[0].y+this.currentParts.length);
     }
 
 
     if(this.currentDirection == -2)//right
     {
-      this.currentParts[this.currentParts.length] = new Point((this.currentParts[length-1].x-this.currentParts.length),this.currentParts[length-1].y);
+      this.currentParts[this.currentParts.length] = new Point((this.currentParts[0].x-this.currentParts.length),this.currentParts[0].y);
     }
 
     if(this.currentDirection == 2)//left
     {
-      this.currentParts[this.currentParts.length] = new Point((this.currentParts[length-1].x+this.currentParts.length),this.currentParts[length-1].y);
+      this.currentParts[this.currentParts.length] = new Point((this.currentParts[0].x+this.currentParts.length),this.currentParts[0].y);
     }
     
   }
