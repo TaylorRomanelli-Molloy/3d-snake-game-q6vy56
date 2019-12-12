@@ -113,7 +113,7 @@ class Snake implements Collidable
   }
   didCollide(a: Actor): boolean
   {
-    if(a.type() != "snake")
+    if(a.type() == "snake")
     {
       for(let z = 0; z < this.currentParts.length; z++)
       {
@@ -124,12 +124,17 @@ class Snake implements Collidable
       }
 
     }
-    /*
     if(this.type != "snake")
     {
-      return true;
+      for(let z = 0; z < this.currentParts.length; z++)
+      {
+       if(this.currentParts[z] == a.Position())
+        {
+          return true;
+        }
+      }
     }
-    */
+    
     
   }
 
