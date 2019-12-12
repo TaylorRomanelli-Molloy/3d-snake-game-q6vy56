@@ -2,7 +2,7 @@ import Actor from './Actor';
 
 interface Collidable extends Actor
 {
-  didCollide:()=>boolean;
+  didCollide:(a: Actor)=>boolean;
 }
 
 export default Collidable;

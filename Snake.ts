@@ -1,9 +1,12 @@
 import display from './display';
 import Point from './Point';
 
+import Collidable from './Collidable';
+import Actor from './Actor';
+
 // place your code on line 5 above the export statement below
 
-class Snake
+class Snake implements Collidable
 {
   private currentParts: [Point];
 
@@ -99,7 +102,7 @@ class Snake
   }
 
 
-  didCollide(s: Point)
+  didCollide(a: Actor)
   {
     
     for(let z = 0; z < this.currentParts.length; z++)
