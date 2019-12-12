@@ -1,6 +1,8 @@
 import WorldModel from './WorldModel';
 import Player from './Player'
 
+import Game from './Game';
+
 class GameController
 {
   private gameWorld: WorldModel;
@@ -8,6 +10,7 @@ class GameController
   private player1: Player;
   private player2: Player;
 
+  private g: Game;
 
   constructor(wm: WorldModel)
   {
